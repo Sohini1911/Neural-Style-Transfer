@@ -49,10 +49,10 @@ $L_{\mathrm{c}}=\sum_{l \in \mathcal{C}}w_{\mathrm{c}}^{[l]}\left\||F^{[l]}(\vec
 
 $L_s^\ell =  \sum_{l \in \mathcal{S}}w_{\mathrm{s}}^\ell\left||G_{\mathrm{s}}^\ell - A_{\mathrm{s}}^\ell\right||_2^2$  ...(3)
 
-$L_{\mathrm{v}}=\sum_{i, j}\left(\left|x_{(i, j)}-x_{(i+1, j)}\right|+\left|x_{(i, j)}-x_{(i, j+1)}\right|\right)$ ...(4)
+$L_{\mathrm{v}}=w_{\mathrm{t}}\sum_{i, j}\left(\left|x_{(i, j)}-x_{(i+1, j)}\right|+\left|x_{(i, j)}-x_{(i, j+1)}\right|\right)$ ...(4)
 
 In equations above, $\mathrm{C}$ is the set of content representation
-layers, $\mathrm{S}$ is the set of style representation layers, the weights $w_{\mathrm{c}}^{[l]}$ and $w_{\mathrm{s}}^{[l]}$
+layers, $\mathrm{S}$ is the set of style representation layers, the weights $w_{\mathrm{c}}^{[l]}$, $w_{\mathrm{s}}^{[l]}$ and $w_{\mathrm{t}}$
 determine the relative weights between loss obtained at multiple style and content representation
 layers in the CNN. The weights α, β, γ determine the relative weights between content, style, and total variational
 loss. All these parameters are hyperparameters that need to
@@ -79,9 +79,34 @@ pleasing result.
 | --- | --- |
 | $\mathrm{C}$ | Layer 3 |
 | $\mathrm{S}$ | Layers 1,4,6,7 |
-| $w_{\mathrm{c}}^{[l]}$ | 5e-2 |
-| $w_{\mathrm{s}}^{[l]}$ | [20000, 500, 12, 1] |
+| $w_{\mathrm{c}}^{[l]}$ | 6e-2 |
+| $w_{\mathrm{s}}^{[l]}$ | [300000, 1000, 15, 3] |
+| $w_{\mathrm{t}}$| 2e-2 |
 |(α, β, γ) | (1, 2, 1e-3)|
 |learning rate| start at lr =3, at iteration 180 to lr = 0.1|
 
+![image](https://github.com/Sohini1911/Neural-Style-Transfer/assets/134104045/1bbef331-a8ca-442f-88eb-c6b46ce712aa)
 
+Iteration 0:
+![image](https://github.com/Sohini1911/Neural-Style-Transfer/assets/134104045/51c65945-6a71-4ae3-bee2-4cc9017bcd9e)
+
+Iteration 199: 
+![image](https://github.com/Sohini1911/Neural-Style-Transfer/assets/134104045/ece60898-758e-4aae-b77d-5f5078a05eb8)
+
+### For example 2
+| Hyperparameters | Values|
+| --- | --- |
+| $\mathrm{C}$ | Layer 3 |
+| $\mathrm{S}$ | Layers 1,4,6,7 |
+| $w_{\mathrm{c}}^{[l]}$ | 3e-2 |
+| $w_{\mathrm{s}}^{[l]}$ | [200000, 800, 12, 1] |
+| $w_{\mathrm{t}}$| 2e-2 |
+|(α, β, γ) | (1, 2, 1e-3)|
+|learning rate| start at lr =3, at iteration 180 to lr = 0.1|
+
+![image](https://github.com/Sohini1911/Neural-Style-Transfer/assets/134104045/23d68568-0053-4dec-83c7-c14f120c272a)
+
+Iteration 199: 
+![image](https://github.com/Sohini1911/Neural-Style-Transfer/assets/134104045/05bfea2f-b4aa-4096-b158-3ea33352436d)
+
+More examples are shown in the notebook
