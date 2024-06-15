@@ -74,7 +74,7 @@ pleasing result.
 
 ## 4. Results
 
-### For example 1
+### Example 1
 | Hyperparameters | Values|
 | --- | --- |
 | $\mathrm{C}$ | Layer 3 |
@@ -93,7 +93,7 @@ Iteration 0:
 Iteration 199: 
 ![image](https://github.com/Sohini1911/Neural-Style-Transfer/assets/134104045/ece60898-758e-4aae-b77d-5f5078a05eb8)
 
-### For example 2
+### Example 2
 | Hyperparameters | Values|
 | --- | --- |
 | $\mathrm{C}$ | Layer 3 |
