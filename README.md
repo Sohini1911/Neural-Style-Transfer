@@ -74,3 +74,14 @@ pleasing result.
 
 ## 4. Results
 
+### For example 1
+| Hyperparameters | Values|
+| --- | --- |
+| $\mathrm{C}$ | Layer 3 |
+| $\mathrm{S}$ | Layers 1,4,6,7 |
+| $w_{\mathrm{c}}^{[l]}$ | 5e-2 |
+| $w_{\mathrm{s}}^{[l]}$ | [20000, 500, 12, 1] |
+|(α, β, γ) | (1, 2, 1e-3)|
+|learning rate| start at lr =3, at iteration 180 to lr = 0.1|
+
+
